@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Roller Derby Member App</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <form id="new-item-form">
+
+      <div id="form-wrapper">
+
+        <div class="form-item">
+          <label for="name" class="primary">Roller Derby Name</label>
+          <input type="text" id="name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="position" class="primary">Position</label>
+          <select id="position">
+           <option value="" disabled selected></option>
+           <option value="Jammer">Jammer</option>
+           <option value="Blocker">Blocker</option>
+           <option value="Offence">Offence</option>
+           <option vale="Any position">Any Position</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="team" class="primary">Rostered Team</label>
+          <select id="team">
+            <option value="" disabled selected></option>
+            <option value="All Stars">All Stars</option>
+            <option value="All Star Reserves">All Star Reserves</option>
+            <option value="ASTROs">ASTROs</option>
+          </select>
+        </div>
+
+      </div>
+      <input type="submit" value="save"/>
+    </form>
+
+    <button id="delete-all">Delete All</button>
+
+    <h2>ARRD Member Profiles</h2>
+    <ul id="member-profiles"></ul>
+  </body>
+</html>

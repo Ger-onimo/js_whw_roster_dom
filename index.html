@@ -31,11 +31,28 @@
           <label for="team" class="primary">Rostered Team</label>
           <select id="team">
             <option value="" disabled selected></option>
-            <option value="All Stars">All Stars</option>
-            <option value="All Star Reserves">All Star Reserves</option>
-            <option value="ASTROs">ASTROs</option>
+            <option value="All Stars">A Team</option>
+            <option value="All Star Reserves">B Team</option>
+            <option value="ASTROs">C Team</option>
+            <option value="All Stars/All Star Reserves">A/B Crossover</option>
+            <option value="All Star Reserves/ASTROs">B/C Crossover</option>
           </select>
         </div>
+
+        <div class="form-item">
+          <label for="pronoun" class="primary">Preferred Pronoun</label>
+          <input id="pronoun" name="pronoun" type="radio" value="she/her"> she/her
+          <input id="pronoun" name="pronoun" type="radio" value="they/them"> they/them
+          <input id="pronoun" name="pronoun" type="radio" value="no preference"> no preference
+          <input id="pronoun" name="pronoun" type="radio" value="other"> other
+          <!-- how to add a text box if 'other is selected' -->
+          <br>
+          If 'other' please fill in details:
+          <input type="text" id="pronoun"/>
+
+        </div>
+
+
 
       </div>
       <input type="submit" value="save"/>

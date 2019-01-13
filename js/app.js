@@ -4,7 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   formSubmit.addEventListener('submit', handleFormSubmit);
 
   const deleteAllClick = document.querySelector('#delete-all');
-  deleteAllClick.addEventListener('click', handleDeleteAllClick)
+  deleteAllClick.addEventListener('click', handleDeleteAllClick);
+
+  const resetForm = document.querySelector('#reset-form');
+  resetForm.addEventListener('click', handleResetFormOnClick);
+  // not working
+
 });
 
 // //////HANDLER - form
@@ -23,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const createMemberProfileItem = function (form) {
     console.log(form)
     const memberProfileItem = document.createElement('ul');
-    // memberProfileItem.classList.add('member-profile-item'); // only for class
+    memberProfileItem.classList.add('member-profile-item'); // only for class
 
     // TODO - nest a memberProfileItemDetail inside memberProfileItem
 
@@ -34,23 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // define derby name
             const name = document.createElement('h3');
-            name.textContent = "Derby Name: " + form.name.value;
+            name.textContent = `Derby Name: ${form.name.value}`;
             memberProfileItem.appendChild(name); // change to memberProfileItemDetail
 
         // define position
             const position = document.createElement('h4');
-            position.textContent = "Position: " + form.position.value;
+            position.textContent = `Position: ${form.position.value}`;
             memberProfileItem.appendChild(position);
 
         // define team
             const team = document.createElement('h4');
-            team.textContent = "Team: " + form.team.value;
+            team.textContent = `Team: ${form.team.value}`;
             memberProfileItem.appendChild(team);
 
         // addition to plan
         // define pronoun
             const pronoun = document.createElement('p');
-            pronoun.textContent = "Preferred pronoun: " + form.pronoun.value;
+            pronoun.textContent = `Preferred pronoun: ${form.pronoun.value}`
             memberProfileItem.appendChild(pronoun);
 
         // // define start date
@@ -65,4 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(event);
     const memberProfile = document.querySelector('#member-profiles');
     memberProfile.innerHTML = '';
+  }
+
+  const handleResetFormOnClick = function (event) {
+    console.log(event);
+    const memberProfile = document.querySelector('#member-profiles');
+    event.reset();
+    // not working
   }
